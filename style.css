@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+* {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(217, 12%, 63%);
+  --medium-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: #19202a;
+  --orange: hsl(25, 97%, 53%);
+  --font-size: 15px;
+  --circle: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: var(--white);
+}
+
+.hidden {
+  display: none !important;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 0%);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+/* Star Icon Style Start */
+.star {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: var(--dark-blue);
+  padding: 10px;
+  border-radius: var(--circle);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.star img {
+  width: 1em;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+/* Star Icon Style End */
+
+/* Rating card style start */
+.rating h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.rating p {
+  margin-top: 0.9rem;
+  font-size: small;
+  font-weight: 500;
+  color: var(--light-gray);
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--very-dark-blue);
+  width: 17rem;
+  border-radius: 1rem;
+  align-items: flex-start;
+  align-content: space-around;
+  padding: 1.5rem;
+  justify-content: space-between;
+  font-family: inherit;
+  row-gap: 5px;
+}
+
+.rating ul {
+  margin-block: 1.7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+/* Rating card style end */
+
+/* Rating Button Style Start */
+.rating-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  column-gap: 1.6rem;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+.rating-section input[type='radio'] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--dark-blue);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.rating-section input[type='radio']:focus {
+  outline: none;
+}
+
+.rating-section input[type='radio']:checked {
+  background-color: var(--orange);
+}
+
+.rating-section input[type='radio']:checked ~ span:first-of-type {
+  background-color: var(--orange);
+  color: white;
+}
+
+label span {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--light-gray);
+  position: relative;
+  left: 0px;
+  top: -45px;
+  background-color: transparent;
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: small;
+  margin: 0;
+}
+
+label span:hover {
+  color: var(--white);
+  background-color: var(--light-gray);
+}
+
+/* .radio-btn:hover{
+  color: white;
+  background-color: var(--light-gray);
+} */
+
+.rating-section label {
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Rating Button Style Start */
+
+/* Submit button Style Start */
+
+#submit {
+  cursor: pointer;
+  font-size: small;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--orange);
+  width: 100%;
+  font-weight: 600;
+  padding-block: 10px;
+  box-shadow: 5px #121212;
+}
+#submit:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+#submit:active {
+  color: var(--orange);
+  background-color: #ffb783;
+}
+
+/* Submit button Style End */
+
+/* Thanks Box */
+
+.thank-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--very-dark-blue);
+  width: 18rem;
+  max-width: 25rem;
+  border-radius: 1rem;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.thank-box img {
+  width: 8rem;
+  height: auto;
+}
+
+.thank-box p {
+  margin-block: 10px;
+  line-height: 20px;
+  font-size: small;
+  color: var(--light-gray);
+}
+
+.thank-box h2 {
+  font-weight: 500;
+}
+
+div.result {
+  margin-block: 1.5rem;
+}
+.result {
+  background-color: var(--dark-blue);
+  border-radius: 2rem;
+  margin: 0;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  padding-inline: 15px;
+}
+.result p,
+div,
+#rated-number {
+  margin: 0;
+  font-size: small;
+  font-weight: 200;
+  color: var(--orange);
+}

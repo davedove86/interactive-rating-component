@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <main>
+      <form class="rating">
+        <div class="star">
+          <img src="images/icon-star.svg" alt="Star icon" />
+        </div>
+        <h2>How did we do?</h2>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <main class="rating-section">
+          <label class="selected">
+            <input type="radio" name="rate" class="radio-btn" value="1" />
+            <span>1</span>
+          </label>
+          <label class="selected">
+            <input type="radio" name="rate" class="radio-btn" value="2" />
+            <span>2</span>
+          </label>
+          <label class="selected">
+            <input type="radio" name="rate" class="radio-btn" value="3" />
+            <span>3</span>
+          </label>
+          <label class="selected">
+            <input type="radio" name="rate" class="radio-btn" value="4" />
+            <span>4</span>
+          </label>
+          <label class="selected">
+            <input type="radio" name="rate" class="radio-btn" value="5" />
+            <span>5</span>
+          </label>
+        </main>
+        <input type="button" id="submit" value="SUBMIT" onclick="thankYou()" />
+      </form>
+
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <section class="thank-box hidden">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="Thank you illustrator"
+        />
+        <div class="result">
+          <p>You selected <span id="rated-number"></span> out of 5</p>
+        </div>
+        <!-- Add rating here -->
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+    <script></script>
+    <script src="script.js"></script>
+  </body>
+</html>
